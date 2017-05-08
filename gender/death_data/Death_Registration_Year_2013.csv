@@ -1,0 +1,85 @@
+ZoneName,Year,Month,Male,Female,Total
+West Zone,2013,1,95,85,180
+West Zone,2013,2,86,70,156
+West Zone,2013,3,94,72,166
+West Zone,2013,4,79,68,147
+West Zone,2013,5,102,70,172
+West Zone,2013,6,91,71,162
+West Zone,2013,7,92,69,161
+West Zone,2013,8,90,71,161
+West Zone,2013,9,82,69,151
+West Zone,2013,10,93,68,161
+West Zone,2013,11,96,66,162
+West Zone,2013,12,104,62,166
+Central Zone,2013,1,227,158,385
+Central Zone,2013,2,230,150,380
+Central Zone,2013,3,218,175,393
+Central Zone,2013,4,215,147,362
+Central Zone,2013,5,218,164,382
+Central Zone,2013,6,232,145,377
+Central Zone,2013,7,216,171,387
+Central Zone,2013,8,237,188,425
+Central Zone,2013,9,213,153,366
+Central Zone,2013,10,225,152,377
+Central Zone,2013,11,237,161,398
+Central Zone,2013,12,225,166,391
+North Zone,2013,1,102,77,179
+North Zone,2013,2,116,78,194
+North Zone,2013,3,102,61,163
+North Zone,2013,4,101,61,162
+North Zone,2013,5,102,80,182
+North Zone,2013,6,78,74,152
+North Zone,2013,7,117,81,198
+North Zone,2013,8,102,73,175
+North Zone,2013,9,87,62,149
+North Zone,2013,10,114,86,200
+North Zone,2013,11,110,77,187
+North Zone,2013,12,134,69,203
+East Zone,2013,1,211,110,321
+East Zone,2013,2,177,104,281
+East Zone,2013,3,182,127,309
+East Zone,2013,4,203,128,331
+East Zone,2013,5,187,122,309
+East Zone,2013,6,172,133,305
+East Zone,2013,7,201,126,327
+East Zone,2013,8,198,120,318
+East Zone,2013,9,188,130,318
+East Zone,2013,10,228,121,349
+East Zone,2013,11,212,113,325
+East Zone,2013,12,165,138,303
+South Zone,2013,1,43,37,80
+South Zone,2013,2,87,58,145
+South Zone,2013,3,71,39,110
+South Zone,2013,4,71,46,117
+South Zone,2013,5,67,44,111
+South Zone,2013,6,56,45,101
+South Zone,2013,7,75,45,120
+South Zone,2013,8,58,46,104
+South Zone,2013,9,58,34,92
+South Zone,2013,10,78,63,141
+South Zone,2013,11,64,38,102
+South Zone,2013,12,89,43,132
+South West Zone,2013,1,256,144,400
+South West Zone,2013,2,244,124,368
+South West Zone,2013,3,208,148,356
+South West Zone,2013,4,246,147,393
+South West Zone,2013,5,234,132,366
+South West Zone,2013,6,264,158,422
+South West Zone,2013,7,248,161,409
+South West Zone,2013,8,308,196,504
+South West Zone,2013,9,275,142,417
+South West Zone,2013,10,277,162,439
+South West Zone,2013,11,286,154,440
+South West Zone,2013,12,234,171,405
+South East Zone,2013,1,81,49,130
+South East Zone,2013,2,85,57,142
+South East Zone,2013,3,71,55,126
+South East Zone,2013,4,59,48,107
+South East Zone,2013,5,86,54,140
+South East Zone,2013,6,59,62,121
+South East Zone,2013,7,68,56,124
+South East Zone,2013,8,88,48,136
+South East Zone,2013,9,74,56,130
+South East Zone,2013,10,67,52,119
+South East Zone,2013,11,73,56,129
+South East Zone,2013,12,74,50,124

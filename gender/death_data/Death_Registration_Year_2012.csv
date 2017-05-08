@@ -1,0 +1,85 @@
+ZoneName,Year,Month,Male,Female,Total
+West Zone,2012,1,90,63,153
+West Zone,2012,2,100,80,180
+West Zone,2012,3,77,72,149
+West Zone,2012,4,80,51,131
+West Zone,2012,5,81,59,140
+West Zone,2012,6,69,59,128
+West Zone,2012,7,63,66,129
+West Zone,2012,8,86,53,139
+West Zone,2012,9,97,74,171
+West Zone,2012,10,104,72,176
+West Zone,2012,11,109,73,182
+West Zone,2012,12,97,90,187
+Central Zone,2012,1,257,171,428
+Central Zone,2012,2,223,161,384
+Central Zone,2012,3,233,167,400
+Central Zone,2012,4,194,151,345
+Central Zone,2012,5,221,166,387
+Central Zone,2012,6,191,123,314
+Central Zone,2012,7,215,145,360
+Central Zone,2012,8,250,176,426
+Central Zone,2012,9,215,150,365
+Central Zone,2012,10,264,154,418
+Central Zone,2012,11,220,138,358
+Central Zone,2012,12,212,146,358
+North Zone,2012,1,111,79,190
+North Zone,2012,2,91,68,159
+North Zone,2012,3,93,83,176
+North Zone,2012,4,91,55,146
+North Zone,2012,5,73,58,131
+North Zone,2012,6,86,55,141
+North Zone,2012,7,86,62,148
+North Zone,2012,8,94,74,168
+North Zone,2012,9,85,78,163
+North Zone,2012,10,119,84,203
+North Zone,2012,11,96,58,154
+North Zone,2012,12,102,58,160
+East Zone,2012,1,161,105,266
+East Zone,2012,2,150,125,275
+East Zone,2012,3,190,131,321
+East Zone,2012,4,151,109,260
+East Zone,2012,5,128,110,238
+East Zone,2012,6,182,117,299
+East Zone,2012,7,161,120,281
+East Zone,2012,8,183,123,306
+East Zone,2012,9,148,117,265
+East Zone,2012,10,198,125,323
+East Zone,2012,11,144,99,243
+East Zone,2012,12,181,115,296
+South Zone,2012,1,75,53,128
+South Zone,2012,2,43,28,71
+South Zone,2012,3,86,61,147
+South Zone,2012,4,59,30,89
+South Zone,2012,5,50,36,86
+South Zone,2012,6,82,58,140
+South Zone,2012,7,65,35,100
+South Zone,2012,8,73,39,112
+South Zone,2012,9,60,39,99
+South Zone,2012,10,65,38,103
+South Zone,2012,11,79,48,127
+South Zone,2012,12,45,30,75
+South West Zone,2012,1,223,114,337
+South West Zone,2012,2,217,142,359
+South West Zone,2012,3,243,129,372
+South West Zone,2012,4,161,113,274
+South West Zone,2012,5,190,128,318
+South West Zone,2012,6,225,111,336
+South West Zone,2012,7,238,152,390
+South West Zone,2012,8,220,148,368
+South West Zone,2012,9,225,120,345
+South West Zone,2012,10,290,154,444
+South West Zone,2012,11,194,130,324
+South West Zone,2012,12,259,147,406
+South East Zone,2012,1,74,56,130
+South East Zone,2012,2,78,54,132
+South East Zone,2012,3,67,53,120
+South East Zone,2012,4,89,38,127
+South East Zone,2012,5,67,46,113
+South East Zone,2012,6,68,47,115
+South East Zone,2012,7,57,52,109
+South East Zone,2012,8,85,50,135
+South East Zone,2012,9,65,40,105
+South East Zone,2012,10,76,62,138
+South East Zone,2012,11,62,48,110
+South East Zone,2012,12,70,66,136
