@@ -1,0 +1,435 @@
+!--------- waterSupplied * Linear regression(year,month,day) --------!
+
+for i=1:611
+for j=1:4
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=612:764
+for j=1:3
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * Linear regression(population) --------!
+
+for i=1:611
+for j=1:2
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=612:764
+test(i-611,1) = Final(i,1);
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,2);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * Linear regression(year,month,day,population) --------!
+
+for i=1:611
+for j=1:5
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=612:764
+for j=1:4
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,5);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * Linear regression(res,non-res) --------!
+
+for i=1:611
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=612:764
+for j=1:2
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,3);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * Linear regression(population,res,non-res) --------!
+
+for i=1:611
+for j=1:4
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=612:764
+for j=1:3
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * Linear regression(year,month,day,res,non-res) --------!
+
+for i=1:611
+for j=1:6
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=612:764
+for j=1:5
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * Linear regression(year,month,day,population,res,non-res) --------!
+
+for i=1:611
+for j=1:6
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=612:764
+for j=1:5
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+!--------- waterSupplied * gausian process regression(month,day,population,res,non-res) --------!
+
+for i=1:611
+for j=1:5
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:611
+label_train(i,1) = Final(i,6);
+end
+
+label_train_array = table2array(label_train);
+
+for i=612:764
+for j=1:5
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * gausian process regression(res,non-res) --------!
+
+for i=1:611
+for j=1:2
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:611
+label_train(i,1) = Final(i,3);
+end
+
+label_train_array = table2array(label_train);
+
+for i=612:764
+for j=1:2
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,3);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * gausian process regression(population) --------!
+
+for i=1:611
+train(i,1) = Final(i,1);
+end
+
+for i=1:611
+label_train(i,1) = Final(i,2);
+end
+
+label_train_array = table2array(label_train);
+
+for i=612:764
+test(i-611,1) = Final(i,1);
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,2);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * gausian process regression(month,day,population) --------!
+
+for i=1:611
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:611
+label_train(i,1) = Final(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=612:764
+for j=1:3
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * gausian process regression(month,day) --------!
+
+for i=1:611
+for j=1:2
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:611
+label_train(i,1) = Final(i,3);
+end
+
+label_train_array = table2array(label_train);
+
+for i=612:764
+for j=1:2
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,3);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * gausian process regression(population,res,non-res) --------!
+
+for i=1:611
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:611
+label_train(i,1) = Final(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=612:764
+for j=1:3
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- waterSupplied * SVM regression(population,res,non-res) --------!
+
+for i=1:611
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:611
+label_train(i,1) = Final(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=612:764
+for j=1:3
+test(i-611,j) = Final(i,j);
+end
+end
+
+for i=612:764
+label_test(i-611,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)

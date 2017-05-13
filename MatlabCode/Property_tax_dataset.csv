@@ -1,0 +1,17 @@
+,advpaid,,without year
+"Linear regression(year,zone)",1518.7,LRP2_1,549.9537
+"Linear regression(year,zone,paid bills,generated bills)",2288.4,LRP4_1,3216.8
+"Linear regression(year,zone,paid bills,generated bills,income,age group,literacy)",571.4727,LRP7_1,1704.3
+"Linear regression(year,zone,paid bills,generated bills,income,age group,literacy,wholly,vacant,total household)",431.8223,LRP10_1,51.5364
+,,,
+,InBillPeriodPaid,,
+Linear regression(zone),4946.1,LRP2_2,
+"Linear regression(zone,paid bills,generated bills)",4403,LRP4_2,
+"Linear regression(zone,paid bills,generated bills,income,age group,literacy)",4443.1,LRP7_2,
+"Linear regression(zone,paid bills,generated bills,income,age group,literacy,wholly,vacant,total household)",3420.8,LRP10_2,
+,,,
+,AfterBillPeriodPaid,,
+Linear regression(zone),,LRP2_3,
+"Linear regression(zone,paid bills,generated bills)",1186.3,LRP4_3,
+"Linear regression(zone,paid bills,generated bills,income,age group,literacy)",6147.4,LRP7_3,
+"Linear regression(zone,paid bills,generated bills,income,age group,literacy,wholly,vacant,total household)",3369.3,LRP10_3,

@@ -1,0 +1,41 @@
+AZ=0
+CZ=1
+EZ=2
+LZ=3
+NZ=4
+SZ=5
+WZ=6
+
+
+
+november 2016 first half=0
+november 2016 second half=1
+december 2016 first half=2
+december 2016 second half=3
+january 2017 first half=4
+january 2017 second half=5
+february 2017 first half=6
+february 2017 second half=7
+
+
+for i=1:620
+for j=1:7
+train(i,j) = Final(i,j);
+end
+end
+
+for i=621:777
+for j=1:6
+test(i-620,j) = Final(i,j);
+end
+end
+
+for i=621:777
+label_test(i-620,1) = Final(i,7);
+end
+
+label_test_array = table2array(label_test);
+
+mdl1 = fitlm(train);
+
+mse = mean(label_test_array - predict(mdl1,test)).^2

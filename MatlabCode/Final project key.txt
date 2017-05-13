@@ -1,0 +1,856 @@
+AZ,SWZ-5
+CZ-1
+EZ-0
+SEZ,LZ-4
+NZ-2
+SZ-3
+WZ-6
+
+
+!--------- NOofConatainers * Gaussian process regression(year,month,zone,population,zone area) --------!
+
+for i=1:211
+for j=1:5
+train(i,j) = Final5(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final5(i,6);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:5
+test(i-211,j) = Final5(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final5(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * Gaussian process regression(zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:6
+train(i,j) = Final6(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final6(i,7);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:6
+test(i-211,j) = Final6(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final6(i,7);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+
+
+!--------- NOofConatainers * Gaussian process regression(year,month,res,non-res-heavy,non-res-light)) --------!
+
+for i=1:211
+for j=1:5
+train(i,j) = Final5(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final5(i,6);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:5
+test(i-211,j) = Final5(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final5(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+!--------- NOofConatainers * Gaussian process regression(year,month) --------!
+
+for i=1:211
+for j=1:2
+train(i,j) = Final2(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final2(i,3);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:2
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,3);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * Gaussian process regression(zone,population,zone area) --------!
+
+for i=1:211
+for j=1:3
+train(i,j) = Final3(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final3(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:3
+test(i-211,j) = Final3(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final3(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * Gaussian process regression(res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:3
+train(i,j) = Final3(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final3(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:3
+test(i-211,j) = Final3(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final3(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * Gaussian process regression(year,month,zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:8
+train(i,j) = Final8(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final8(i,9);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:8
+test(i-211,j) = Final8(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final8(i,9);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * Linear regression(year,month) --------!
+
+for i=1:211
+for j=1:3
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:2
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,3);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * Linear regression(year,month,zone,population,zone area) --------!
+
+for i=1:211
+for j=1:6
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:5
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * Linear regression(year,month,zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:9
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:8
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,9);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- REGRESSION DECISION TREE * NOofConatainers * first five predictors --------!
+
+
+for i=1:230
+for j=1:5
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:230
+label_train(i,1) = Final(i,6);
+end
+
+label_train_array = table2array(label_train);
+
+for i=231:288
+for j=1:5
+test(i-230,j) = Final(i,j);
+end
+end
+
+for i=231:288
+label_test(i-230,1) = Final(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrtree(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+
+!--------- TotalGarbageweight * Linear regression(year,month) --------!
+
+for i=1:211
+for j=1:3
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:2
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,3);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- TotalGarbageweight * Linear regression(year,month,zone,population,zone area) --------!
+
+for i=1:211
+for j=1:6
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:5
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- TotalGarbageweight * Linear regression(zone,population,zone area) --------!
+
+for i=1:211
+for j=1:4
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:3
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- TotalGarbageweight * Linear regression(res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:4
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:3
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- TotalGarbageweight * Linear regression(zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:7
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:6
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,7);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- TotalGarbageweight * Linear regression(year,month,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:6
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:5
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- TotalGarbageweight * Linear regression(year,month,zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:9
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:8
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,9);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+
+
+
+
+
+
+
+!--------- NOofConatainers * SVM regression(zone,population,zone area) --------!
+
+for i=1:211
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:3
+test(i-211,j) = Final(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+!--------- NOofConatainers * SVM regression(res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:3
+test(i-211,j) = Final(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * SVM regression(year,month,zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:8
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final(i,9);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:8
+test(i-211,j) = Final(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final(i,9);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * SVM regression(zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:6
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final(i,7);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:6
+test(i-211,j) = Final(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final(i,7);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+!--------- NOofConatainers * SVM regression(year,month,zone,population,zone area) --------!
+
+for i=1:211
+for j=1:5
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final(i,6);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:5
+test(i-211,j) = Final(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * SVM regression(res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:3
+test(i-211,j) = Final(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- NOofConatainers * SVM regression(year, month, res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:5
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:211
+label_train(i,1) = Final(i,6);
+end
+
+label_train_array = table2array(label_train);
+
+for i=212:264
+for j=1:5
+test(i-211,j) = Final(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final(i,6);
+end
+
+label_test_array = table2array(label_test);
+
+Mdl = fitrsvm(train,label_train_array);
+
+test_estimate = predict(Mdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+
+
+
+!--------- TotalGarbageweight * Linear regression(month, zone,population,zone area,res,non-res-heavy,non-res-light) --------!
+
+for i=1:211
+for j=1:8
+train(i,j) = Final2(i,j);
+end
+end
+
+
+for i=212:264
+for j=1:7
+test(i-211,j) = Final2(i,j);
+end
+end
+
+for i=212:264
+label_test(i-211,1) = Final2(i,8);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)

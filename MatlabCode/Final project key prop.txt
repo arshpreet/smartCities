@@ -1,0 +1,365 @@
+!--------- advpaid * Linear regression(year,zone) --------!
+
+for i=1:33
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+for j=1:2
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,3);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Linear regression(year,zone,paid bills,generated bills) --------!
+
+for i=1:33
+for j=1:5
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+for j=1:4
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,5);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+!--------- advpaid * Linear regression(year,zone,paid bills,generated bills,income,age group,literacy) --------!
+
+for i=1:33
+for j=1:8
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+for j=1:7
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,8);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Linear regression(year,zone,paid bills,generated bills,income,age group,literacy,wholly,vacant,total household) --------!
+
+for i=1:33
+for j=1:11
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+for j=1:10
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,11);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Linear regression(zone,paid bills,generated bills,income,age group,literacy,wholly,vacant,total household) --------!
+
+
+for i=1:33
+for j=1:10
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+for j=1:9
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,10);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Linear regression(zone,paid bills,generated bills,income,age group,literacy) --------!
+
+for i=1:33
+for j=1:7
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+for j=1:6
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,7);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Linear regression(zone,paid bills,generated bills) --------!
+
+for i=1:33
+for j=1:4
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+for j=1:3
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Linear regression(zone,paid bills,generated bills) --------!
+
+for i=1:33
+for j=1:2
+train(i,j) = Final(i,j);
+end
+end
+
+
+for i=34:42
+test(i-33,1) = Final(i,1);
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,2);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitlm(train);
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Gaussian process regression(zone) --------!
+
+for i=1:33
+train(i,1) = Final(i,1);
+end
+
+for i=1:33
+label_train(i,1) = Final(i,2);
+end
+
+label_train_array = table2array(label_train);
+
+for i=34:42
+test(i-33,1) = Final(i,1);
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,2);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Gaussian process regression(zone,paid bills,generated bills) --------!
+
+for i=1:33
+for j=1:3
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:33
+label_train(i,1) = Final(i,4);
+end
+
+label_train_array = table2array(label_train);
+
+for i=34:42
+for j=1:3
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,4);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+!--------- advpaid * Gaussian process regression(zone,paid bills,generated bills,income,age group,literacy) --------!
+
+for i=1:33
+for j=1:6
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:33
+label_train(i,1) = Final(i,7);
+end
+
+label_train_array = table2array(label_train);
+
+for i=34:42
+for j=1:6
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,7);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)
+
+
+
+!--------- advpaid * Gaussian process regression(zone,paid bills,generated bills,income,age group,literacy,wholly,vacant,total household) --------!
+
+for i=1:33
+for j=1:9
+train(i,j) = Final(i,j);
+end
+end
+
+for i=1:33
+label_train(i,1) = Final(i,10);
+end
+
+label_train_array = table2array(label_train);
+
+for i=34:42
+for j=1:9
+test(i-33,j) = Final(i,j);
+end
+end
+
+for i=34:42
+label_test(i-33,1) = Final(i,10);
+end
+
+label_test_array = table2array(label_test);
+
+gprMdl = fitrgp(train,label_train_array,'KernelFunction','ardsquaredexponential');
+
+test_estimate = predict(gprMdl,test);
+
+mse = mean(label_test_array - test_estimate).^2;
+
+sqrt(mse)

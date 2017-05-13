@@ -1,0 +1,7 @@
+,no of containers
+"year, month",248.06
+"zone, pop, area",67.83
+"res,non-res-heavy, non-res-light",629.31
+"year, month,zone, pop, area",61.98
+"year, month,res,non-res-heavy, non-res-light",21.29
+"zone, pop, area, res,non-res-heavy, non-res-light",26.88
